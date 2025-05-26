@@ -8,5 +8,6 @@ namespace Clinic_Management_Project.Models
 {
     internal class Patient
     {
+        hello
     }
 }
