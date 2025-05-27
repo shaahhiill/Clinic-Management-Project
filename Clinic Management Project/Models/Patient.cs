@@ -8,6 +8,7 @@ namespace Clinic_Management_Project.Models
 {
     internal class Patient
     {
-        my name is shaahil
+        my name is arzaq
     }
+    hihihi
 }
