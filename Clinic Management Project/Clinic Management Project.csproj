@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Models\Admin.class" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
