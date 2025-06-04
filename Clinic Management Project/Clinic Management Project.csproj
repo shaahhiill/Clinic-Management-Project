@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Patient.cs" />
+    <Compile Include="Personcs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
