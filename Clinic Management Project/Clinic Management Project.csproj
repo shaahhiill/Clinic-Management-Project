@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Models\Admin.class" />
+    <Compile Include="Models\Admin.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controller\" />
