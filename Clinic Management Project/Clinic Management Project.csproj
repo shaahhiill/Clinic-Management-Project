@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,10 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseConfig.cs" />
+    <Compile Include="DB classes\DoctorDB.cs" />
+    <Compile Include="registerDoctorGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registerDoctorGUI.Designer.cs">
+      <DependentUpon>registerDoctorGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager classes\DoctorManager.cs" />
     <Compile Include="Models\Doctor.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\Personcs.cs" />
     <Compile Include="Models\Program.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
