@@ -47,6 +47,8 @@
   <ItemGroup>
     <Compile Include="DatabaseConfig.cs" />
     <Compile Include="DB classes\DoctorDB.cs" />
+    <Compile Include="Manager classes\AppointmentManager.cs" />
+    <Compile Include="Models\Appointment.cs" />
     <Compile Include="registerDoctorGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +70,11 @@
   <ItemGroup>
     <Folder Include="Controller\" />
     <Folder Include="Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="registerDoctorGUI.resx">
+      <DependentUpon>registerDoctorGUI.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
