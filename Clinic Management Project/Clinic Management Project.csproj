@@ -101,6 +101,7 @@
     <Compile Include="DB classes\DoctorDB.cs" />
     <Compile Include="Manager classes\AppointmentManager.cs" />
     <Compile Include="Models\Appointment.cs" />
+    <Compile Include="Prescription.cs" />
     <Compile Include="registerDoctorGUI.cs">
       <SubType>Form</SubType>
     </Compile>
