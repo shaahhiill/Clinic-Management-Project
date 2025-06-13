@@ -8,6 +8,6 @@ namespace Clinic_Management_Project
 {
     public static class DatabaseConfig
     {
-        public static string ConnectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=ClinicDB;Integrated Security=True";
+        public static string ConnectionString = "server=localhost;user id=root;password=;database=clinicdb";
     }
 }
