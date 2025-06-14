@@ -84,5 +84,10 @@ namespace Clinic_Management_Project.GUI
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
