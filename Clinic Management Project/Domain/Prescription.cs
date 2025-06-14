@@ -23,5 +23,11 @@ namespace Clinic_Management_Project
             Dosage = dosage;
         }
 
+        public override string ToString()
+        {
+            return $"Prescription ID: {PrescriptionID}, Patient ID: {PatientID}, Doctor ID: {DoctorID}, Medication: {Medication}, Dosage: {Dosage}";
+        }
+
+
     }
 }

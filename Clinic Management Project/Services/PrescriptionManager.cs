@@ -36,6 +36,12 @@ namespace Clinic_Management_Project
             return false;
         }
 
+        public List<Prescription> GetPrescriptionsByPatient(string patientID)
+        {
+            return prescriptions.Where(p => p.PatientID == patientID).ToList();
+        }
+
+
 
     }
 }
