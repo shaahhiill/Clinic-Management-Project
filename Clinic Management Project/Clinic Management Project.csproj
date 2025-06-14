@@ -98,8 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data DB\AppointmentDB.cs" />
+    <Compile Include="Data DB\DbConnectionFactory.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Data DB\PatientDB.cs" />
     <Compile Include="Data DB\PrecriptionDB.cs" />
+    <Compile Include="Data DB\UserDb.cs" />
     <Compile Include="DatabaseConfig.cs" />
     <Compile Include="Data DB\DoctorDB.cs" />
     <Compile Include="Domain\Prescription.cs" />
@@ -127,7 +131,6 @@
     <Compile Include="Services\DoctorManager.cs" />
     <Compile Include="Domain\Doctor.cs" />
     <Compile Include="Domain\Patient.cs" />
-    <Compile Include="Domain\Personcs.cs" />
     <Compile Include="Domain\Program.cs" />
     <Compile Include="Domain\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,6 +175,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="appsettings.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
