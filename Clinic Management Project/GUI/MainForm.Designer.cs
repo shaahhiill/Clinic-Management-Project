@@ -2,15 +2,14 @@
 {
     partial class MainForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.Button btnPatient;
+        private System.Windows.Forms.Button btnDoctor;
+        private System.Windows.Forms.Button btnAppointment;
+        private System.Windows.Forms.Button btnPrescription;
+        private System.Windows.Forms.Button btnReports;
+        private System.Windows.Forms.Button btnExit;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,106 +19,90 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnPatient = new System.Windows.Forms.Button();
+            this.btnDoctor = new System.Windows.Forms.Button();
+            this.btnAppointment = new System.Windows.Forms.Button();
+            this.btnPrescription = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnPatient
             // 
-            this.button1.Location = new System.Drawing.Point(112, 54);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(190, 41);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Manage Patients";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnPatient.Location = new System.Drawing.Point(30, 30);
+            this.btnPatient.Name = "btnPatient";
+            this.btnPatient.Size = new System.Drawing.Size(150, 30);
+            this.btnPatient.TabIndex = 0;
+            this.btnPatient.Text = "Manage Patients";
+            this.btnPatient.UseVisualStyleBackColor = true;
+            this.btnPatient.Click += new System.EventHandler(this.btnPatient_Click);
             // 
-            // button2
+            // btnDoctor
             // 
-            this.button2.Location = new System.Drawing.Point(112, 117);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(190, 45);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Manage Doctors";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnDoctor.Location = new System.Drawing.Point(30, 70);
+            this.btnDoctor.Name = "btnDoctor";
+            this.btnDoctor.Size = new System.Drawing.Size(150, 30);
+            this.btnDoctor.TabIndex = 1;
+            this.btnDoctor.Text = "Manage Doctors";
+            this.btnDoctor.UseVisualStyleBackColor = true;
+            this.btnDoctor.Click += new System.EventHandler(this.btnDoctor_Click);
             // 
-            // button3
+            // btnAppointment
             // 
-            this.button3.Location = new System.Drawing.Point(112, 185);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(190, 37);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Appointments";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnAppointment.Location = new System.Drawing.Point(30, 110);
+            this.btnAppointment.Name = "btnAppointment";
+            this.btnAppointment.Size = new System.Drawing.Size(150, 30);
+            this.btnAppointment.TabIndex = 2;
+            this.btnAppointment.Text = "Manage Appointments";
+            this.btnAppointment.UseVisualStyleBackColor = true;
+            this.btnAppointment.Click += new System.EventHandler(this.btnAppointment_Click);
             // 
-            // button4
+            // btnPrescription
             // 
-            this.button4.Location = new System.Drawing.Point(112, 240);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(190, 34);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Prescriptions";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnPrescription.Location = new System.Drawing.Point(30, 150);
+            this.btnPrescription.Name = "btnPrescription";
+            this.btnPrescription.Size = new System.Drawing.Size(150, 30);
+            this.btnPrescription.TabIndex = 3;
+            this.btnPrescription.Text = "Manage Prescriptions";
+            this.btnPrescription.UseVisualStyleBackColor = true;
+            this.btnPrescription.Click += new System.EventHandler(this.btnPrescription_Click);
             // 
-            // button5
+            // btnReports
             // 
-            this.button5.Location = new System.Drawing.Point(112, 293);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(190, 41);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Reports";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnReports.Location = new System.Drawing.Point(30, 190);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(150, 30);
+            this.btnReports.TabIndex = 4;
+            this.btnReports.Text = "View Reports";
+            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
-            // button6
+            // btnExit
             // 
-            this.button6.Location = new System.Drawing.Point(112, 355);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(190, 36);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Log Out";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnExit.Location = new System.Drawing.Point(30, 230);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(150, 30);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(220, 300);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnReports);
+            this.Controls.Add(this.btnPrescription);
+            this.Controls.Add(this.btnAppointment);
+            this.Controls.Add(this.btnDoctor);
+            this.Controls.Add(this.btnPatient);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "Clinic Management - Main";
             this.ResumeLayout(false);
-
         }
-
-        #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
     }
 }

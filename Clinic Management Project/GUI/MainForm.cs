@@ -18,41 +18,39 @@ namespace Clinic_Management_Project.GUI
             InitializeComponent();
         }
 
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPatient_Click(object sender, EventArgs e)
         {
-            var form = new FormPatient();
+            FormPatient form = new FormPatient();
             form.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnDoctor_Click(object sender, EventArgs e)
         {
-            var form = new FormDoctor();
+            FormDoctor form = new FormDoctor();
             form.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnAppointment_Click(object sender, EventArgs e)
         {
-            var form = new FormAppointment();
+            FormAppointment form = new FormAppointment();
             form.ShowDialog();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnPrescription_Click(object sender, EventArgs e)
         {
-            var form = new FormPrescription();
+            FormPrescription form = new FormPrescription();
             form.ShowDialog();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnReports_Click(object sender, EventArgs e)
         {
-            var form = new FormReports();
+            FormReports form = new FormReports();
             form.ShowDialog();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            // Log out / close main form
-            this.Close();
+            Application.Exit();
         }
     }
 }
