@@ -119,6 +119,12 @@
     <Compile Include="GUI\FormDoctor.Designer.cs">
       <DependentUpon>FormDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormManageAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormManageAppointments.Designer.cs">
+      <DependentUpon>FormManageAppointments.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormPatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormDoctor.resx">
       <DependentUpon>FormDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormManageAppointments.resx">
+      <DependentUpon>FormManageAppointments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormPatient.resx">
       <DependentUpon>FormPatient.cs</DependentUpon>
