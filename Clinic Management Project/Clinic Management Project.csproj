@@ -104,7 +104,6 @@
     <Compile Include="DatabaseConfig.cs" />
     <Compile Include="Data DB\DoctorDB.cs" />
     <Compile Include="DBHelper\DBHelper.cs" />
-    <Compile Include="Domain\Prescription.cs" />
     <Compile Include="GUI\FormAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,16 +140,16 @@
     <Compile Include="GUI\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrescriptionForm.cs">
+    <Compile Include="GUI\PrescriptionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrescriptionForm.Designer.cs">
+    <Compile Include="GUI\PrescriptionForm.Designer.cs">
       <DependentUpon>PrescriptionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrescriptionManager.cs" />
+    <Compile Include="Services\PrescriptionManager.cs" />
     <Compile Include="Services\AppointmentManager.cs" />
     <Compile Include="Domain\Appointment.cs" />
-    <Compile Include="Prescription.cs" />
+    <Compile Include="Domain\Prescription.cs" />
     <Compile Include="registerDoctorGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,7 +164,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\NotificationService.cs" />
     <Compile Include="Services\PatientManager.cs" />
-    <Compile Include="Services\PrescriptionManager.cs" />
     <Compile Include="Services\ReportManager.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="TestConnectionSQL.cs" />
@@ -227,7 +225,7 @@
     <EmbeddedResource Include="GUI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrescriptionForm.resx">
+    <EmbeddedResource Include="GUI\PrescriptionForm.resx">
       <DependentUpon>PrescriptionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="registerDoctorGUI.resx">
