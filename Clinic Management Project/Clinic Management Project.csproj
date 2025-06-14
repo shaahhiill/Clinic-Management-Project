@@ -140,6 +140,12 @@
     <Compile Include="GUI\FormPrescription.Designer.cs">
       <DependentUpon>FormPrescription.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\FormReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormReports.Designer.cs">
+      <DependentUpon>FormReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormPrescription.resx">
       <DependentUpon>FormPrescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormReports.resx">
+      <DependentUpon>FormReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
