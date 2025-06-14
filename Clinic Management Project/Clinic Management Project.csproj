@@ -169,7 +169,9 @@
     <Compile Include="Services\ReportManager.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="TestConnectionSQL.cs" />
-    <Compile Include="UI\FormAppointment.cs" />
+    <Compile Include="UI\FormAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\FormAppointment.Designer.cs">
       <DependentUpon>FormAppointment.cs</DependentUpon>
     </Compile>
