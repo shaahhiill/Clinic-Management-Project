@@ -40,7 +40,11 @@
             this.BtnGenerate = new System.Windows.Forms.Button();
             this.LblReportType = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.DgvReportResults = new System.Windows.Forms.DataGridView();
+            this.BtnEmailReport = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvReportResults)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -147,12 +151,33 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(50, 469);
+            this.groupBox2.Controls.Add(this.BtnEmailReport);
+            this.groupBox2.Controls.Add(this.DgvReportResults);
+            this.groupBox2.Location = new System.Drawing.Point(50, 452);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(532, 277);
+            this.groupBox2.Size = new System.Drawing.Size(532, 300);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Report ";
+            this.groupBox2.Text = "Report Results";
+            // 
+            // DgvReportResults
+            // 
+            this.DgvReportResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvReportResults.Location = new System.Drawing.Point(25, 42);
+            this.DgvReportResults.Name = "DgvReportResults";
+            this.DgvReportResults.RowHeadersWidth = 62;
+            this.DgvReportResults.RowTemplate.Height = 28;
+            this.DgvReportResults.Size = new System.Drawing.Size(377, 179);
+            this.DgvReportResults.TabIndex = 0;
+            // 
+            // BtnEmailReport
+            // 
+            this.BtnEmailReport.Location = new System.Drawing.Point(270, 242);
+            this.BtnEmailReport.Name = "BtnEmailReport";
+            this.BtnEmailReport.Size = new System.Drawing.Size(132, 38);
+            this.BtnEmailReport.TabIndex = 1;
+            this.BtnEmailReport.Text = "Email Report";
+            this.BtnEmailReport.UseVisualStyleBackColor = true;
             // 
             // FormReports
             // 
@@ -165,6 +190,8 @@
             this.Text = "FormReports";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvReportResults)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,5 +210,7 @@
         private System.Windows.Forms.Label LblFromDate;
         private System.Windows.Forms.Label LblReportType;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button BtnEmailReport;
+        private System.Windows.Forms.DataGridView DgvReportResults;
     }
 }
