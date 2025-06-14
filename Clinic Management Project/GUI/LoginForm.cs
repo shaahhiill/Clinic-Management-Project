@@ -21,12 +21,6 @@ namespace Clinic_Management_Project.GUI
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            // Optionally focus the username field on load
-            txtUsername.Focus();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text;  // assume plaintext for now (but hash ideally)
 
@@ -74,15 +68,7 @@ namespace Clinic_Management_Project.GUI
                 MessageBox.Show("Error during login: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
