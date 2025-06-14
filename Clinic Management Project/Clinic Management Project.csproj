@@ -98,6 +98,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data DB\AppointmentDB.cs" />
+    <Compile Include="Data DB\DbConnectionFactory.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
     <Compile Include="Data DB\PatientDB.cs" />
     <Compile Include="Data DB\PrecriptionDB.cs" />
     <Compile Include="DatabaseConfig.cs" />
@@ -160,6 +163,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="appsettings.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
