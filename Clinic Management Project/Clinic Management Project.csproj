@@ -107,6 +107,12 @@
     <Compile Include="DatabaseConfig.cs" />
     <Compile Include="Data DB\DoctorDB.cs" />
     <Compile Include="Domain\Prescription.cs" />
+    <Compile Include="GUI\FormAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormAppointment.Designer.cs">
+      <DependentUpon>FormAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FormDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUI\FormAppointment.resx">
+      <DependentUpon>FormAppointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormDoctor.resx">
       <DependentUpon>FormDoctor.cs</DependentUpon>
     </EmbeddedResource>
