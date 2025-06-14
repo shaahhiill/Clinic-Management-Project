@@ -152,14 +152,20 @@
     <Compile Include="GUI\PrescriptionForm.Designer.cs">
       <DependentUpon>PrescriptionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\PatientHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PatientHistoryForm.Designer.cs">
+      <DependentUpon>PatientHistoryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Services\PrescriptionManager.cs" />
     <Compile Include="Services\AppointmentManager.cs" />
     <Compile Include="Domain\Appointment.cs" />
     <Compile Include="Domain\Prescription.cs" />
-    <Compile Include="registerDoctorGUI.cs">
+    <Compile Include="GUI\registerDoctorGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="registerDoctorGUI.Designer.cs">
+    <Compile Include="GUI\registerDoctorGUI.Designer.cs">
       <DependentUpon>registerDoctorGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\DoctorManager.cs" />
@@ -189,12 +195,6 @@
     <Compile Include="UI\FormPatientHistory.cs" />
     <Compile Include="UI\FormPatientHistory.Designer.cs">
       <DependentUpon>FormPatientHistory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\FormPrescription.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\FormPrescription.Designer.cs">
-      <DependentUpon>FormPrescription.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FormReports.cs">
       <SubType>Form</SubType>
@@ -237,7 +237,10 @@
     <EmbeddedResource Include="GUI\PrescriptionForm.resx">
       <DependentUpon>PrescriptionForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="registerDoctorGUI.resx">
+    <EmbeddedResource Include="GUI\PatientHistoryForm.resx">
+      <DependentUpon>PatientHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\registerDoctorGUI.resx">
       <DependentUpon>registerDoctorGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormDashboard.resx">

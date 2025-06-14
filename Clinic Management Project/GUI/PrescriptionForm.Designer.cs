@@ -42,8 +42,8 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDownload = new System.Windows.Forms.Button();
-            this.lstPrescriptions = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.lstPrescriptions)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtPrescriptionID
@@ -144,6 +144,7 @@
             this.btnLoad.TabIndex = 11;
             this.btnLoad.Text = "Load";
             this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnEdit
             // 
@@ -153,6 +154,7 @@
             this.btnEdit.TabIndex = 12;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDownload
             // 
@@ -162,23 +164,24 @@
             this.btnDownload.TabIndex = 13;
             this.btnDownload.Text = "Download";
             this.btnDownload.UseVisualStyleBackColor = true;
+            this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
             // 
-            // lstPrescriptions
+            // dataGridView1
             // 
-            this.lstPrescriptions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.lstPrescriptions.Location = new System.Drawing.Point(12, 12);
-            this.lstPrescriptions.Name = "lstPrescriptions";
-            this.lstPrescriptions.RowHeadersWidth = 51;
-            this.lstPrescriptions.RowTemplate.Height = 24;
-            this.lstPrescriptions.Size = new System.Drawing.Size(776, 202);
-            this.lstPrescriptions.TabIndex = 14;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(776, 202);
+            this.dataGridView1.TabIndex = 14;
             // 
             // PrescriptionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 580);
-            this.Controls.Add(this.lstPrescriptions);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnDownload);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnLoad);
@@ -195,7 +198,7 @@
             this.Controls.Add(this.txtPrescriptionID);
             this.Name = "PrescriptionForm";
             this.Text = "PrescriptionForm";
-            ((System.ComponentModel.ISupportInitialize)(this.lstPrescriptions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,6 +220,6 @@
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDownload;
-        private System.Windows.Forms.DataGridView lstPrescriptions;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
