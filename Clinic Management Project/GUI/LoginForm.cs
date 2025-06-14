@@ -1,4 +1,6 @@
 ﻿using Clinic_Management_Project.UI;
+using ClinicManagementSystem;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,70 +12,54 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Clinic_Management_Project.GUI
+namespace ClinicManagementSystem
 {
-    public partial class LoginForm : Form
+    public partial class FormLogin : Form
     {
-        public LoginForm()
+        public FormLogin()
         {
             InitializeComponent();
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
-            string password = txtPassword.Text;  // assume plaintext for now (but hash ideally)
+            string password = txtPassword.Text.Trim();
 
-            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
-                MessageBox.Show("Please enter both username and password.", "Validation Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter both username and password.", "Validation Error");
                 return;
             }
 
-            try
+            using (var conn = DBHelper.GetConnection())
             {
-                using var conn = Data.DbConnectionFactory.GetOpenConnection();
-                string query = "SELECT UserId, Role, PasswordHash FROM Users WHERE Username = @username";
-                using var cmd = new MySqlCommand(query, conn);
+                conn.Open();
+                string query = "SELECT * FROM Users WHERE Username=@username AND Password=@password";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
 
-                using var reader = cmd.ExecuteReader();
-                if (reader.Read())
+                using (var reader = cmd.ExecuteReader())
                 {
-                    string dbHash = reader.GetString("PasswordHash");
-                    string role = reader.GetString("Role");
-                    int userId = reader.GetInt32("UserId");
-
-                    // For demo: compare plaintext. In reality, use hashed password + salt!
-                    if (dbHash == password)
+                    if (reader.Read())
                     {
-                        // Login successful
+                        string role = reader["Role"].ToString();
+                        MessageBox.Show($"Login successful! Role: {role}", "Success");
                         this.Hide();
-                        var mainForm = new MainForm(userId, username, role);
-                        mainForm.Show();
+                        new FormDashboard().Show(); // Or role-based form navigation
                     }
                     else
                     {
-                        MessageBox.Show("Invalid password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Invalid username or password.", "Login Failed");
                     }
                 }
-                else
-                {
-                    MessageBox.Show("User not found.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error during login: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void btnCancelLogin_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

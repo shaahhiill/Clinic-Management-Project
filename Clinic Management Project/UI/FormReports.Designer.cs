@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clinic_Management_Project.UI
 {
-    internal class FormReports
+    partial class FormReports
     {
     }
 }

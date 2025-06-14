@@ -98,14 +98,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data DB\AppointmentDB.cs" />
-    <Compile Include="Data DB\DbConnectionFactory.cs">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="Data DB\PatientDB.cs" />
     <Compile Include="Data DB\PrecriptionDB.cs" />
     <Compile Include="Data DB\UserDb.cs" />
     <Compile Include="DatabaseConfig.cs" />
     <Compile Include="Data DB\DoctorDB.cs" />
+    <Compile Include="DBHelper\DBHelper.cs" />
     <Compile Include="Domain\Prescription.cs" />
     <Compile Include="GUI\FormAppointment.cs">
       <SubType>Form</SubType>
@@ -169,33 +167,28 @@
     <Compile Include="UI\FormAppointment.Designer.cs">
       <DependentUpon>FormAppointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FormDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\FormDoctor.cs" />
     <Compile Include="UI\FormDoctor.Designer.cs">
       <DependentUpon>FormDoctor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\FormPatient.cs" />
-    <Compile Include="UI\FormPatient.Designer.cs">
-      <DependentUpon>FormPatient.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FormPatientHistory.cs" />
     <Compile Include="UI\FormPatientHistory.Designer.cs">
       <DependentUpon>FormPatientHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FormPrescription.cs" />
+    <Compile Include="UI\FormPrescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\FormPrescription.Designer.cs">
       <DependentUpon>FormPrescription.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FormReports.cs" />
+    <Compile Include="UI\FormReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\FormReports.Designer.cs">
       <DependentUpon>FormReports.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\LoginForm.cs" />
-    <Compile Include="UI\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\MainForm.cs" />
-    <Compile Include="UI\MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -228,6 +221,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="registerDoctorGUI.resx">
       <DependentUpon>registerDoctorGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormDashboard.resx">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormReports.resx">
+      <DependentUpon>FormReports.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

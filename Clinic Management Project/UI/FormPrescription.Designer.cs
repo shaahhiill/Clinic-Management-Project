@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Clinic_Management_Project.UI
 {
-    internal class FormPrescription
+    public partial class FormPrescription
     {
+        private void InitializeComponent()
+        {
+            // designer code
+        }
     }
 }
