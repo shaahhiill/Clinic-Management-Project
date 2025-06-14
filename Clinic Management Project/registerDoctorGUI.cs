@@ -21,5 +21,10 @@ namespace Clinic_Management_Project
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
