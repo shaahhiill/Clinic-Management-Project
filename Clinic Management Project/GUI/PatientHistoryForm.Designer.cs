@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Clinic_Management_Project.GUI
+namespace Clinic_Management_Project
 {
     public partial class PatientHistoryForm : Form
     {
@@ -24,4 +24,3 @@ namespace Clinic_Management_Project.GUI
         }
     }
 }
-   

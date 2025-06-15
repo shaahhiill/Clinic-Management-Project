@@ -31,9 +31,9 @@
             // 
             // btnPatient
             // 
-            this.btnPatient.Location = new System.Drawing.Point(30, 30);
+            this.btnPatient.Location = new System.Drawing.Point(34, 32);
             this.btnPatient.Name = "btnPatient";
-            this.btnPatient.Size = new System.Drawing.Size(150, 30);
+            this.btnPatient.Size = new System.Drawing.Size(171, 32);
             this.btnPatient.TabIndex = 0;
             this.btnPatient.Text = "Manage Patients";
             this.btnPatient.UseVisualStyleBackColor = true;
@@ -41,9 +41,9 @@
             // 
             // btnDoctor
             // 
-            this.btnDoctor.Location = new System.Drawing.Point(30, 70);
+            this.btnDoctor.Location = new System.Drawing.Point(34, 75);
             this.btnDoctor.Name = "btnDoctor";
-            this.btnDoctor.Size = new System.Drawing.Size(150, 30);
+            this.btnDoctor.Size = new System.Drawing.Size(171, 32);
             this.btnDoctor.TabIndex = 1;
             this.btnDoctor.Text = "Manage Doctors";
             this.btnDoctor.UseVisualStyleBackColor = true;
@@ -51,9 +51,9 @@
             // 
             // btnAppointment
             // 
-            this.btnAppointment.Location = new System.Drawing.Point(30, 110);
+            this.btnAppointment.Location = new System.Drawing.Point(34, 117);
             this.btnAppointment.Name = "btnAppointment";
-            this.btnAppointment.Size = new System.Drawing.Size(150, 30);
+            this.btnAppointment.Size = new System.Drawing.Size(171, 32);
             this.btnAppointment.TabIndex = 2;
             this.btnAppointment.Text = "Manage Appointments";
             this.btnAppointment.UseVisualStyleBackColor = true;
@@ -61,9 +61,9 @@
             // 
             // btnPrescription
             // 
-            this.btnPrescription.Location = new System.Drawing.Point(30, 150);
+            this.btnPrescription.Location = new System.Drawing.Point(34, 160);
             this.btnPrescription.Name = "btnPrescription";
-            this.btnPrescription.Size = new System.Drawing.Size(150, 30);
+            this.btnPrescription.Size = new System.Drawing.Size(171, 32);
             this.btnPrescription.TabIndex = 3;
             this.btnPrescription.Text = "Manage Prescriptions";
             this.btnPrescription.UseVisualStyleBackColor = true;
@@ -71,9 +71,9 @@
             // 
             // btnReports
             // 
-            this.btnReports.Location = new System.Drawing.Point(30, 190);
+            this.btnReports.Location = new System.Drawing.Point(34, 203);
             this.btnReports.Name = "btnReports";
-            this.btnReports.Size = new System.Drawing.Size(150, 30);
+            this.btnReports.Size = new System.Drawing.Size(171, 32);
             this.btnReports.TabIndex = 4;
             this.btnReports.Text = "View Reports";
             this.btnReports.UseVisualStyleBackColor = true;
@@ -81,9 +81,9 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(30, 230);
+            this.btnExit.Location = new System.Drawing.Point(34, 245);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(150, 30);
+            this.btnExit.Size = new System.Drawing.Size(171, 32);
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -91,9 +91,9 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(220, 300);
+            this.ClientSize = new System.Drawing.Size(395, 375);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnReports);
             this.Controls.Add(this.btnPrescription);
@@ -103,6 +103,7 @@
             this.Name = "MainForm";
             this.Text = "Clinic Management - Main";
             this.ResumeLayout(false);
+
         }
     }
 }
