@@ -9,6 +9,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.DataGridView dgvReports;
 
+
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -25,7 +26,6 @@
             this.btnGenerate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.dgvReports = new System.Windows.Forms.DataGridView();
-            this.btnEmail = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,15 +70,15 @@
             this.dgvReports.RowHeadersWidth = 62;
             this.dgvReports.Size = new System.Drawing.Size(500, 250);
             this.dgvReports.TabIndex = 4;
-            // 
-            // btnEmail
-            // 
-            this.btnEmail.Location = new System.Drawing.Point(398, 81);
-            this.btnEmail.Name = "btnEmail";
-            this.btnEmail.Size = new System.Drawing.Size(75, 23);
-            this.btnEmail.TabIndex = 5;
-            this.btnEmail.Text = "button1";
-            this.btnEmail.UseVisualStyleBackColor = true;
+            //
+            //btnEmail
+            //
+            this.btnEmail = new System.Windows.Forms.Button();
+            this.btnEmail.Text = "Email Report";
+            this.btnEmail.Location = new System.Drawing.Point(270, 70);
+            this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
+            this.Controls.Add(this.btnEmail);
+
             // 
             // FormReports
             // 

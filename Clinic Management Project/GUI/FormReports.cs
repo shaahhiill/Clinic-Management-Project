@@ -88,10 +88,10 @@ namespace Clinic_Management_Project.GUI
 
             if (sfd.ShowDialog() == DialogResult.OK)
             {
-                // Export to CSV (comma seperated values)
+                // Export DataGridView to CSV
                 using (var writer = new System.IO.StreamWriter(sfd.FileName))
                 {
-                    // Write headers
+                    // Headers
                     for (int i = 0; i < dgvReports.Columns.Count; i++)
                     {
                         writer.Write(dgvReports.Columns[i].HeaderText);
@@ -100,33 +100,36 @@ namespace Clinic_Management_Project.GUI
                     }
                     writer.WriteLine();
 
-                    // Write data
+                    // Rows
                     foreach (DataGridViewRow row in dgvReports.Rows)
                     {
-                        for (int i = 0; i < dgvReports.Columns.Count; i++)
+                        if (!row.IsNewRow)
                         {
-                            writer.Write(row.Cells[i].Value?.ToString());
-                            if (i < dgvReports.Columns.Count - 1)
-                                writer.Write(",");
+                            for (int i = 0; i < dgvReports.Columns.Count; i++)
+                            {
+                                writer.Write(row.Cells[i].Value?.ToString());
+                                if (i < dgvReports.Columns.Count - 1)
+                                    writer.Write(",");
+                            }
+                            writer.WriteLine();
                         }
-                        writer.WriteLine();
                     }
                 }
 
-                // Send email 
+                // Send Email
                 try
                 {
                     var mail = new System.Net.Mail.MailMessage();
-                    mail.From = new System.Net.Mail.MailAddress("youremail@example.com");
-                    mail.To.Add("recipient@example.com");
+                    mail.From = new System.Net.Mail.MailAddress("arzaqauffer07@gmail.com");
+                    mail.To.Add("recipient@example.com"); // Adjust dynamically if needed
                     mail.Subject = "Clinic Report";
                     mail.Body = "Please find the attached report.";
                     mail.Attachments.Add(new System.Net.Mail.Attachment(sfd.FileName));
 
-                    var smtp = new System.Net.Mail.SmtpClient("smtp.yourprovider.com")
+                    var smtp = new System.Net.Mail.SmtpClient("smtp.gmail.com")
                     {
                         Port = 587,
-                        Credentials = new System.Net.NetworkCredential("youremail@example.com", "yourpassword"),
+                        Credentials = new System.Net.NetworkCredential("arzaqauffer07@gmail.com", "qwertysdam"),
                         EnableSsl = true
                     };
 
