@@ -72,6 +72,72 @@ namespace Clinic_Management_Project.GUI
             dgvReports.DataSource = null;
         }
 
-        
+        private void btnEmail_Click(object sender, EventArgs e)
+        {
+            if (dgvReports.Rows.Count == 0)
+            {
+                MessageBox.Show("No report data to email.");
+                return;
+            }
+
+            SaveFileDialog sfd = new SaveFileDialog
+            {
+                Filter = "CSV Files (*.csv)|*.csv",
+                FileName = $"Report_{DateTime.Now:yyyyMMddHHmmss}.csv"
+            };
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                // Export to CSV (comma seperated values)
+                using (var writer = new System.IO.StreamWriter(sfd.FileName))
+                {
+                    // Write headers
+                    for (int i = 0; i < dgvReports.Columns.Count; i++)
+                    {
+                        writer.Write(dgvReports.Columns[i].HeaderText);
+                        if (i < dgvReports.Columns.Count - 1)
+                            writer.Write(",");
+                    }
+                    writer.WriteLine();
+
+                    // Write data
+                    foreach (DataGridViewRow row in dgvReports.Rows)
+                    {
+                        for (int i = 0; i < dgvReports.Columns.Count; i++)
+                        {
+                            writer.Write(row.Cells[i].Value?.ToString());
+                            if (i < dgvReports.Columns.Count - 1)
+                                writer.Write(",");
+                        }
+                        writer.WriteLine();
+                    }
+                }
+
+                // Send email 
+                try
+                {
+                    var mail = new System.Net.Mail.MailMessage();
+                    mail.From = new System.Net.Mail.MailAddress("youremail@example.com");
+                    mail.To.Add("recipient@example.com");
+                    mail.Subject = "Clinic Report";
+                    mail.Body = "Please find the attached report.";
+                    mail.Attachments.Add(new System.Net.Mail.Attachment(sfd.FileName));
+
+                    var smtp = new System.Net.Mail.SmtpClient("smtp.yourprovider.com")
+                    {
+                        Port = 587,
+                        Credentials = new System.Net.NetworkCredential("youremail@example.com", "yourpassword"),
+                        EnableSsl = true
+                    };
+
+                    smtp.Send(mail);
+                    MessageBox.Show("Report emailed successfully!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error sending email: " + ex.Message);
+                }
+            }
+        }
     }
 }

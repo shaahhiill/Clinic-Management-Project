@@ -104,6 +104,7 @@
     <Compile Include="DatabaseConfig.cs" />
     <Compile Include="Data DB\DoctorDB.cs" />
     <Compile Include="DBHelper\DatabaseConnection.cs" />
+    <Compile Include="Domain\Notification.cs" />
     <Compile Include="GUI\FormAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
