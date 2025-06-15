@@ -10,7 +10,8 @@ namespace ClinicManagementSystem
 {
     public static class DatabaseConnection
     {
-        private static string connStr = "server=127.0.0.1;user=root;database=clinic_management;port=3306;password=;";
+        private static string connStr = "server=127.0.0.1;user=root;database=clinic_db;port=3306;password=;";
+
 
         public static MySqlConnection GetConnection()
         {
