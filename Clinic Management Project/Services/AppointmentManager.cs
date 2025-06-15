@@ -1,4 +1,5 @@
-﻿using Clinic_Management_Project.Models;
+﻿using Clinic_Management_Project.Domain;
+using Clinic_Management_Project.Data_DB;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -6,34 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clinic_Management_Project.Manager_classes
+namespace Clinic_Management_Project.Services
 {
     public class AppointmentManager
     {
-        private string connStr = DatabaseConfig.ConnectionString;
-
-        public List<Appointment> GetAppointments()
+        public bool BookAppointment(Appointment appointment)
         {
-            List<Appointment> list = new List<Appointment>();
-            using (SqlConnection conn = new SqlConnection(connStr))
+            return AppointmentDB.AddAppointment(appointment);
+        }
+
+        public bool CancelAppointment(int appointmentId)
+        {
+            return AppointmentDB.DeleteAppointment(appointmentId);
+        }
+
+        public bool RescheduleAppointment(int appointmentId, DateTime newDate)
+        {
+            var appointment = new Appointment
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Appointments", conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    list.Add(new Appointment
-                    {
-                        AppointmentID = (int)reader["AppointmentID"],
-                        DateTime = (DateTime)reader["DateTime"],
-                        Status = reader["Status"].ToString(),
-                        PatientName = reader["PatientName"].ToString(),
-                        DoctorID = (int)reader["DoctorID"],
-                        NotificationSent = (bool)reader["NotificationSent"]
-                    });
-                }
-            }
-            return list;
+                AppointmentID = appointmentId,
+                DateTime = newDate
+            };
+            return AppointmentDB.UpdateAppointment(appointment);
         }
     }
 }

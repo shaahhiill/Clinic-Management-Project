@@ -1,5 +1,6 @@
 ﻿using Clinic_Management_Project.DB_classes;
-using Clinic_Management_Project.Models;
+using Clinic_Management_Project.Domain;
+using Clinic_Management_Project.Data_DB;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,26 +11,19 @@ namespace Clinic_Management_Project
 {
     public class DoctorManager
     {
-        private DoctorDB doctorDB = new DoctorDB();
-
         public bool RegisterDoctor(Doctor doctor)
         {
-            return doctorDB.InsertDoctor(doctor);
+            return DoctorDB.AddDoctor(doctor);
         }
 
-        public bool UpdateDoctorProfile(int userId, string newSpec, string newSchedule)
+        public bool UpdateDoctorSchedule(int doctorId, string newSchedule)
         {
-            return doctorDB.UpdateDoctorProfile(userId, newSpec, newSchedule);
-        }
-
-        public List<Doctor> GetAllDoctors()
-        {
-            return doctorDB.FetchAllDoctors();
-        }
-
-        public Doctor GetDoctorByUserId(int userId)
-        {
-            return doctorDB.GetDoctor(userId);
+            var doctor = new Doctor
+            {
+                DoctorID = doctorId,
+                Schedule = newSchedule
+            };
+            return DoctorDB.UpdateDoctor(doctor);
         }
     }
 }

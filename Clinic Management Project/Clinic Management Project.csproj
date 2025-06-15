@@ -148,11 +148,11 @@
     <Compile Include="GUI\FormReports.Designer.cs">
       <DependentUpon>FormReports.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\LoginForm.cs">
+    <Compile Include="GUI\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <Compile Include="GUI\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\MainForm.cs">
       <SubType>Form</SubType>
@@ -207,8 +207,8 @@
     <EmbeddedResource Include="GUI\FormReports.resx">
       <DependentUpon>FormReports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

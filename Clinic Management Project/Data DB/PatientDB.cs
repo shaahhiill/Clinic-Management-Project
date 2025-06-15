@@ -12,7 +12,7 @@ namespace Clinic_Management_Project.Data_DB
 {
     public class PatientDB
     {
-        public static bool RegisterPatient(Patient patient)
+        public static bool AddPatient(Patient patient)
         {
             var conn = DatabaseConnection.GetConnection();
             try
@@ -34,7 +34,34 @@ namespace Clinic_Management_Project.Data_DB
             {
                 return false;
             }
-            finally { conn.Close(); }
+            finally
+            { 
+                conn.Close(); 
+            }
         }
+
+        public static bool DeletePatient(int patientId)
+        {
+            var conn = DatabaseConnection.GetConnection();
+            try
+            {
+                conn.Open();
+                string sql = "DELETE FROM Patients WHERE PatientID = @id";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@id", patientId);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+
     }
 }

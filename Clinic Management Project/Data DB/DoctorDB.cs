@@ -45,5 +45,28 @@ namespace Clinic_Management_Project.DB_classes
             finally { conn.Close(); }
             return dt;
         }
+
+        public static bool UpdateDoctor(Doctor doctor)
+        {
+            var conn = DatabaseConnection.GetConnection();
+            try
+            {
+                conn.Open();
+                string sql = @"UPDATE doctors SET schedule = @schedule WHERE doctorID = @doctorID";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@schedule", doctor.Schedule);
+                cmd.Parameters.AddWithValue("@doctorID", doctor.DoctorID);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
 }

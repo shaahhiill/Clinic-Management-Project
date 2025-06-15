@@ -13,7 +13,7 @@ namespace Clinic_Management_Project.Domain
         public string Name;
         public string Specialization;
         public string Schedule;
-
+        public int DoctorID;
 
        
        

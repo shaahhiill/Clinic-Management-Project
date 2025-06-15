@@ -1,4 +1,4 @@
-﻿using Clinic_Management_Project.UI;
+﻿using Clinic_Management_Project.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

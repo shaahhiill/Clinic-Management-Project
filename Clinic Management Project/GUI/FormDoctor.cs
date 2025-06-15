@@ -37,10 +37,7 @@ namespace Clinic_Management_Project.GUI
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            finally
-            {
-                conn.Close();
-            }
+            finally { conn.Close(); }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -63,16 +60,12 @@ namespace Clinic_Management_Project.GUI
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            finally
-            {
-                conn.Close();
-            }
+            finally { conn.Close(); }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (dgvDoctors.CurrentRow == null) return;
-
             string id = dgvDoctors.CurrentRow.Cells[0].Value.ToString();
             MySqlConnection conn = DatabaseConnection.GetConnection();
             try
@@ -93,16 +86,12 @@ namespace Clinic_Management_Project.GUI
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            finally
-            {
-                conn.Close();
-            }
+            finally { conn.Close(); }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dgvDoctors.CurrentRow == null) return;
-
             string id = dgvDoctors.CurrentRow.Cells[0].Value.ToString();
             MySqlConnection conn = DatabaseConnection.GetConnection();
             try
@@ -120,10 +109,7 @@ namespace Clinic_Management_Project.GUI
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            finally
-            {
-                conn.Close();
-            }
+            finally { conn.Close(); }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -136,46 +122,6 @@ namespace Clinic_Management_Project.GUI
             txtName.Clear();
             txtSpecialty.Clear();
             txtSchedule.Clear();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAddSchedule_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnRemoveSchedule_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblStart_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblEnd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LblDay_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

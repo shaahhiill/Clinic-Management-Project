@@ -1,5 +1,4 @@
 ﻿using Clinic_Management_Project.GUI;
-using Clinic_Management_Project.UI;
 using ClinicManagementSystem;
 using MySql.Data.MySqlClient;
 using System;

@@ -2,7 +2,7 @@
 
 namespace Clinic_Management_Project.GUI
 {
-    partial class FormDoctor
+    public partial class FormDoctor : Form
     {
         private System.ComponentModel.IContainer components = null;
         private System.Windows.Forms.Label lblName;
@@ -25,6 +25,8 @@ namespace Clinic_Management_Project.GUI
             }
             base.Dispose(disposing);
         }
+
+
 
         private void InitializeComponent()
         {

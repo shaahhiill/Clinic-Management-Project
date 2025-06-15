@@ -1,39 +1,31 @@
-﻿using Clinic_Management_Project.Models;
+﻿using Clinic_Management_Project.Domain;
 using System;
+using System.Windows.Forms;
+using Clinic_Management_Project.GUI;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClinicManagementSystem;
 
 namespace Clinic_Management_Project
 {
-    internal class Program
+    static class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            Patient p = new Patient();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
-            // Get patient details
-            Console.Write("Enter First Name: ");
-            p.FirstName = Console.ReadLine();
+            // Start with LoginForm
+            Application.Run(new FormLogin());
 
-            Console.Write("Enter Last Name: ");
-            p.LastName = Console.ReadLine();
-
-            Console.Write("Enter Date of Birth (yyyy-mm-dd): ");
-            p.DateOfBirth = DateTime.Parse(Console.ReadLine());
-
-            Console.Write("Enter Gender: ");
-            p.Gender = Console.ReadLine();
-
-            Console.Write("Enter Contact Number: ");
-            p.ContactNumber = Console.ReadLine();
-
-            Console.Write("Enter Medical History: ");
-            p.MedicalHistory = Console.ReadLine();
-
-            // Register the patient
-            p.RegisterPatient();
+            // If you prefer to skip login, comment above line and uncomment below
+            // Application.Run(new MainForm());
         }
     }
 }
