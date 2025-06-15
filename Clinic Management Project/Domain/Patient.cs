@@ -5,17 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clinic_Management_Project.Models
+namespace Clinic_Management_Project.Domain
 {
-    class Patient
+    public class Patient : User
     {
-        // Encapsulated properties
+
         public string FirstName;
         public string LastName;
         public DateTime DateOfBirth;
         public string Gender;
         public string ContactNumber;
-        public string MedicalHistory;
+        public string MedicalHistory; 
+
+
 
         // Method to register patient into the database
         public void RegisterPatient()

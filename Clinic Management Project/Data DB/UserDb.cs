@@ -1,4 +1,4 @@
-﻿using Clinic_Management_Project.Models;
+﻿using Clinic_Management_Project.Domain;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -10,28 +10,21 @@ namespace ClinicManagementSystem.Data
 {
     public class UserDb
     {
-        private readonly string _connString;
-        public UserDb(string connString) => _connString = connString;
-
-        public User ValidateUser(string username, string password)
+        public static bool ValidateLogin(string username, string password)
         {
-            using var conn = new MySqlConnection(_connString);
-            conn.Open();
-            var cmd = new MySqlCommand(
-                "SELECT UserId, Username, Role FROM Users WHERE Username = @u AND PasswordHash = @p", conn);
-            cmd.Parameters.AddWithValue("@u", username);
-            cmd.Parameters.AddWithValue("@p", password);
-            using var reader = cmd.ExecuteReader();
-            if (reader.Read())
+            var conn = DatabaseConnection.GetConnection();
+            try
             {
-                return new User
-                {
-                    UserId = reader.GetInt32("UserId"),
-                    Username = reader.GetString("Username"),
-                    Role = reader.GetString("Role")
-                };
+                conn.Open();
+                string sql = "SELECT COUNT(*) FROM users WHERE username = @username AND password = @password";
+                var cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+                int count = System.Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
             }
-            return null;
+            catch { return false; }
+            finally { conn.Close(); }
         }
     }
 }

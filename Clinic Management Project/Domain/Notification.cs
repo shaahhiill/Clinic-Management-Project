@@ -1,4 +1,4 @@
-﻿using Clinic_Management_Project.Models;
+﻿using Clinic_Management_Project.Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;

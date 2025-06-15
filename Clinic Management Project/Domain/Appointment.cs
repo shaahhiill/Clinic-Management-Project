@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clinic_Management_Project.Models
+namespace Clinic_Management_Project.Domain
 {
     public class Appointment
     {
@@ -15,7 +15,9 @@ namespace Clinic_Management_Project.Models
         public string PatientName;
         public int DoctorID;
         public bool NotificationSent;
+        public int PatientID;
 
-        
+
+
     }
 }

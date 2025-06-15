@@ -98,8 +98,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data DB\AppointmentDB.cs" />
+    <Compile Include="Data DB\NotificationDB.cs" />
     <Compile Include="Data DB\PatientDB.cs" />
-    <Compile Include="Data DB\PrecriptionDB.cs" />
+    <Compile Include="Data DB\PrescriptionDB.cs" />
     <Compile Include="Data DB\UserDb.cs" />
     <Compile Include="DatabaseConfig.cs" />
     <Compile Include="Data DB\DoctorDB.cs" />
@@ -174,29 +175,6 @@
     <Compile Include="Services\ReportManager.cs" />
     <Compile Include="Services\UserService.cs" />
     <Compile Include="TestConnectionSQL.cs" />
-    <Compile Include="UI\FormAppointment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\FormAppointment.Designer.cs">
-      <DependentUpon>FormAppointment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\FormDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\FormDoctor.cs" />
-    <Compile Include="UI\FormDoctor.Designer.cs">
-      <DependentUpon>FormDoctor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\FormPatientHistory.cs" />
-    <Compile Include="UI\FormPatientHistory.Designer.cs">
-      <DependentUpon>FormPatientHistory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\FormReports.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\FormReports.Designer.cs">
-      <DependentUpon>FormReports.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -234,12 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\FormDashboard.resx">
-      <DependentUpon>FormDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\FormReports.resx">
-      <DependentUpon>FormReports.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,29 +1,28 @@
-﻿using System;
-using System.Data.SqlClient;
+﻿using Clinic_Management_Project.Domain;
+using ClinicManagementSystem;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Clinic_Management_Project.Domain;
-using ClinicManagementSystem;
-using MySql.Data.MySqlClient;
-using System.Data;
 
-namespace Clinic_Management_Project.DB_classes
+namespace Clinic_Management_Project.Data_DB
 {
-    public class DoctorDB
+   public class NotificationDB
     {
-        public static bool AddDoctor(Doctor doctor)
+        public static bool AddNotification(Notification notification)
         {
             var conn = DatabaseConnection.GetConnection();
             try
             {
                 conn.Open();
-                string sql = "INSERT INTO doctors (name, specialty, schedule) VALUES (@name, @specialty, @schedule)";
+                string sql = "INSERT INTO notifications (recipient, message, sendDate) VALUES (@recipient, @message, @sendDate)";
                 var cmd = new MySqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@name", doctor.Name);
-                cmd.Parameters.AddWithValue("@specialty", doctor.Specialization);
-                cmd.Parameters.AddWithValue("@schedule", doctor.Schedule);
+                cmd.Parameters.AddWithValue("@recipient", notification.Recipient);
+                cmd.Parameters.AddWithValue("@message", notification.Message);
+                cmd.Parameters.AddWithValue("@sendDate", notification.SendDate);
                 cmd.ExecuteNonQuery();
                 return true;
             }
@@ -31,14 +30,14 @@ namespace Clinic_Management_Project.DB_classes
             finally { conn.Close(); }
         }
 
-        public static DataTable GetDoctors()
+        public static DataTable GetNotifications()
         {
             var conn = DatabaseConnection.GetConnection();
             var dt = new DataTable();
             try
             {
                 conn.Open();
-                string sql = "SELECT * FROM doctors";
+                string sql = "SELECT * FROM notifications";
                 var adapter = new MySqlDataAdapter(sql, conn);
                 adapter.Fill(dt);
             }

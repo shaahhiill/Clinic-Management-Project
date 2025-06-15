@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clinic_Management_Project.Models
+namespace Clinic_Management_Project.Domain
 {
     public abstract class User
     {
